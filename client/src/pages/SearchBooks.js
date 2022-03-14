@@ -5,6 +5,7 @@ import Auth from '../utils/auth';
 import { searchGoogleBooks } from '../utils/API';
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 import { SAVE_BOOK } from '../utils/mutation';
+import { useMutation } from '@apollo/client';
 
 const SearchBooks = () => {
   // create state for holding returned google api data
@@ -44,6 +45,7 @@ const SearchBooks = () => {
         title: book.volumeInfo.title,
         description: book.volumeInfo.description,
         image: book.volumeInfo.imageLinks?.thumbnail || '',
+        link: book.volumeInfo.infoLink || '',
       }));
 
       setSearchedBooks(bookData);
@@ -56,7 +58,7 @@ const SearchBooks = () => {
   // create function to handle saving a book to our database
   const handleSaveBook = async (bookId) => {
     // find the book in `searchedBooks` state by the matching id
-    const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
+    const book = searchedBooks.find((book) => book.bookId === bookId);
     console.log('book!', book);
 
     // get token
