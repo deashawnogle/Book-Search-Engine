@@ -40,8 +40,8 @@ const resolvers = {
     saveBook: async (parent, { book }, context) => {
       if (context.user) {
         return User.findOneAndUpdate(
-            { _id: oncontextmenu.user._id },
-            { $addToset: { savedBooks: book }, },
+            { _id: context.user._id },
+            { $addToSet: { savedBooks: book }, },
             {
                 new: true,
                 runValidators: true,
