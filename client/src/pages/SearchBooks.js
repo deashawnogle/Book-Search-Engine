@@ -143,6 +143,7 @@ const SearchBooks = () => {
           })}
         </CardColumns>
       </Container>
+  
     </>
   );
 };
