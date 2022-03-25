@@ -72,7 +72,9 @@ THEN I am logged out of the site and presented with a menu with the options Sear
 ## Links
 ------------
 <a href= "https://github.com/deashawnogle/Text-Editor">Git Hub Repository </a> <br>
-<a href= "https://daesang-google-book-search.herokuapp.com/"> Heroku App </a>
+<a href= "https://daesang-google-book-search.herokuapp.com/"> Heroku App </a> <br>
+<a href= "https://watch.screencastify.com/v/YgBf0dWJOoHjbqNAyPNw"> Recorded Video </a>
+
 
 ## Screenshot
 ------------
